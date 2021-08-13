@@ -1,0 +1,111 @@
+@use '../mixin/breakpoints' as bk;
+@use '../mixin/title' as t;
+@use '../base/functions' as f;
+
+body{
+    font-family: sans-serif;
+}
+
+.header{
+    &__title{
+        //background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        position: fixed;
+        @include t.title();
+        margin: 0;
+        //padding: 10px;
+        transition: background-color 0.3s ease;
+        z-index: 998;
+
+        @include bk.tablet{
+            padding: 12.5px;
+            font-size: 2rem;
+        }
+
+        @include bk.laptop{
+            background-color: transparent;
+            width: 22%;
+        }
+    }
+
+    &__text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 85vh;
+        //border: 1px solid red;
+
+        @include bk.tablet{
+            height: 85vh;
+        }
+
+        @include bk.laptop{
+            height: 100vh;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+    }
+
+    &__parrafo{
+        //border: 1px solid red;
+        position: relative;
+        opacity: 0;
+        font-weight: 500;
+        font-size:1rem ;
+        color: f.color('white');
+        text-align: center;
+        font-style: italic;
+
+        @include bk.laptop{
+            font-size: 2rem;
+            font-weight: 100;
+            opacity: 1;
+        }
+    }
+
+    &__fondo{
+        background-image: url(../../../public/assets/fondo.jpg);
+        background-position: center;
+        background-size:cover;
+        //background-attachment: fixed;
+        object-fit: cover;
+        width: 100%;
+        height: 85vh;
+
+        @include bk.tablet{
+            height: 85vh;
+        }
+
+        @include bk.laptop{
+            height: 100vh;
+        }
+    }
+
+}
+
+.span{
+    font-size: 2rem;
+    color: f.color('primary');
+    @include bk.tablet{
+        font-size: 3rem;
+    }
+}
+
+.span-2{
+    font-size: 1.2rem;
+
+    @include bk.laptop{
+        font-weight: 700;
+        font-size: 2.3rem;
+    }
+    //color: f.color('red-modal');
+}
+
+.transparent{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+

@@ -1,0 +1,23 @@
+/*
+*BASE
+*/
+@use 'base/normalize';
+
+/*
+*COMPONENTS
+*/
+@use 'includes/header';
+@use 'includes/article';
+//@use 'includes/main';
+
+/*
+*COMPONENTS
+*/
+@use 'components/aEnlaces';
+@use 'components/btn';
+@use 'components/secciones';
+@use 'components/concepto';
+@use 'components/evolucion';
+@use 'components/cancion';
+@use 'components/banda';
+@use 'components/_footer';

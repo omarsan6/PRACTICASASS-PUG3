@@ -1,0 +1,46 @@
+@use '../base/functions' as f;
+@use '../mixin/breakpoints' as bk;
+
+.canciones{
+    //border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding-bottom: 10px;
+
+    &__figure{
+        margin: 0;
+        box-shadow: 0px 0px 15px rgba(7, 7, 7, 0.3);
+        transition: transform 0.3s ease;
+
+        @include bk.laptop{
+            gap: 80px;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__img{
+        width: 220px;
+        height: 220px;  
+
+    }
+
+    &__text{
+        padding: 10px;
+        color: f.color('text');
+        font-weight: bold;
+
+        &--active{
+            color: f.color('primary');
+            
+        }
+    }
+
+    @include bk.laptop{
+        gap: 80px;
+    }
+}

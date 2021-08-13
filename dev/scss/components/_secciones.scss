@@ -1,0 +1,36 @@
+@use '../base/functions' as f;
+@use '../mixin/breakpoints' as bk;
+
+.section{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    //height: 100vh;
+    
+    //border: 1px solid red;
+
+    &__subtitle{
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        text-align: center;
+        color: f.color('primary');
+        padding: 2rem;
+        padding-top: 3.5rem;
+        width: 100%;
+        //border: 1px solid red;
+        @include bk.tablet{
+            padding-top: 5rem;
+        }
+
+        @include bk.laptop{
+            padding-top: 5rem;
+        }
+        
+    }
+}
+
+.article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

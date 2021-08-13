@@ -1,0 +1,21 @@
+{
+  "name": "practicasass-pug3",
+  "version": "1.0.0",
+  "description": "1. Crea un package con un npm init\r 2. Instala gulp con npm install --save-dev gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "@babel/register": "^7.14.5",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-terser": "^2.0.1"
+  }
+}

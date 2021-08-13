@@ -1,0 +1,77 @@
+@use '../base/functions' as f;
+@use '../mixin/breakpoints' as bk;
+
+.concepto{
+    //border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+
+    &__title,
+    &__concepto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        //border: 1px solid blue;
+    }
+
+    &__title{
+        height: 20vh;
+        background-color: f.color('black-modal');
+
+        @include bk.laptop{
+            height: 50vh;
+            background-color: f.color('primary-modal');
+        }
+    }
+
+    &__h3{
+        font-size: 2rem;
+        text-align: center;
+        color: f.color('white');
+        //border: 1px solid green;
+
+        @include bk.laptop{
+            font-size: 3rem;
+        }
+    }
+
+    &__concepto{
+        padding: 20px;
+        height: 50vh;
+        background-color: f.color('black-modal');
+
+        @include bk.laptop{
+            height: 40vh;
+        }
+    }
+
+    &__parrafo{
+        //border: 1px solid green;
+        font-size: 1rem;
+        line-height: 1.5;
+        color:f.color('white') ;
+
+        @include bk.tablet{
+            font-size: 1.2rem;
+            padding: 10px;
+            line-height: 2.2;
+        }
+
+        @include bk.laptop{
+            font-size: 1.1rem;
+            padding: 10px;
+            line-height: 2;
+        }
+        
+    }
+
+    @include bk.laptop{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+}

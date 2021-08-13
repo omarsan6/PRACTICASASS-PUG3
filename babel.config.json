@@ -1,0 +1,4 @@
+//plugin para convertir de codigo nuevo a viejo 
+{
+    "presets": ["@babel/preset-env"]
+}
